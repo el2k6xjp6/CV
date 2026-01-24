@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-page: var(--bg-page);
+  --color-bg-card: var(--bg-card);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
+}
+
+:root {
+  --bg-page: #f9fafb;     /* zinc-50 */
+  --bg-card: #ffffff;     /* white */
+  --text-main: #18181b;   /* zinc-900 */
+  --text-muted: #71717a;  /* zinc-500 */
+  --border-subtle: #e4e4e7;
+}
+
+.dark {
+  --bg-page: #000000;     /* 純黑 */
+  --bg-card: #121212;     /* 極深灰（比背景亮一點點） */
+  --text-main: #f4f4f5;   /* 亮灰，解決字看不到的問題 */
+  --text-muted: #a1a1aa;  /* 中灰 */
+  --border-subtle: #27272a;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,31 +1,30 @@
 {
-  "name": "cv",
-  "homepage": "https://el2k6xjp6.github.io/CV/",
+  "name": "deron-portfolio",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "pre-deploy": "bun run build",
-    "deploy": "gh-pages -d dist",
-    "prepare": "husky install",
-    "format": "prettier --write ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
-    "linaria": "^5.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "framer-motion": "^12.29.0",
+    "html2pdf.js": "^0.14.0",
+    "lucide-react": "^0.563.0",
+    "next": "16.1.4",
+    "next-themes": "^0.4.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "gh-pages": "^6.0.0",
-    "husky": "^8.0.0",
-    "prettier": "^3.0.3",
-    "typescript": "^4.9.3",
-    "vite": "^4.2.0"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
