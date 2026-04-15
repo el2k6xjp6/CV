@@ -2,6 +2,7 @@
 "use client";
 import { portfolioData } from '@/data/portfolio';
 import { ExperienceCard } from '@/components/ExperienceCard';
+import { ProjectCard } from '@/components/ProjectCard';
 import { Section } from '@/components/Section';
 import { SkillsGrid } from '@/components/SkillsGrid';
 import { Linkedin, Mail } from 'lucide-react';
@@ -37,6 +38,18 @@ export default function Home() {
                 }}
               >
                 Experience
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                className="hover:text-indigo-600 hover:scale-105 transition-all duration-200 bg-transparent p-0 m-0 border-none cursor-pointer h-9 flex items-center"
+                onClick={() => {
+                  const el = document.getElementById('projects');
+                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
+              >
+                Projects
               </button>
             </li>
             <li>
@@ -83,9 +96,11 @@ export default function Home() {
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
-        <h1 className="relative text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 z-10">{portfolioData.title}</h1>
-        <h2 className="relative text-xl font-medium text-indigo-600 dark:text-indigo-400 mb-2 z-10">Based in {portfolioData.location}</h2>
-        <p className="relative max-w-3xl text-lg mb-6 z-10 opacity-80">{portfolioData.summary}</p>
+        <div className="relative sm:ml-8 z-10">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4">{portfolioData.title}</h1>
+          <h2 className="text-xl font-medium text-indigo-600 dark:text-indigo-400 mb-2">Based in {portfolioData.location}</h2>
+          <p className="max-w-3xl text-lg mb-6 opacity-80">{portfolioData.summary}</p>
+        </div>
       </Section>
 
       {/* Main Content Wrapper */}
@@ -96,7 +111,7 @@ export default function Home() {
           className="bg-bg-page"
           id="contact"
         >
-          <div className="flex flex-col gap-4 text-text-main">
+          <div className="sm:ml-8 flex flex-col gap-4 text-text-main">
             <a href={`mailto:${portfolioData.contact.email}`} className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
               <Mail size={18} />
               {portfolioData.contact.email}
@@ -115,13 +130,22 @@ export default function Home() {
           ))}
         </Section>
 
+        {/* Projects Section */}
+        <Section title="Projects" className="bg-bg-page" id="projects">
+          {portfolioData.projects.map((project, idx) => (
+            <ProjectCard key={idx} project={project} />
+          ))}
+        </Section>
+
         {/* Skills Section */}
         <Section
           title="Skills"
           className="bg-bg-card border-y border-border-subtle"
           id="skills"
         >
-          <SkillsGrid skills={portfolioData.skills} />
+          <div className="sm:ml-8">
+            <SkillsGrid skills={portfolioData.skills} />
+          </div>
         </Section>
 
         {/* Education Section */}
@@ -130,7 +154,7 @@ export default function Home() {
           className="bg-bg-page"
           id="education"
         >
-          <ul className="space-y-4">
+          <ul className="sm:ml-8 space-y-4">
             {portfolioData.education.map((edu, idx) => (
               <li key={edu.institution + idx} className="border-l-4 border-indigo-500 pl-4">
                 {/* 使用 text-text-main 確保在深色模式變亮 */}

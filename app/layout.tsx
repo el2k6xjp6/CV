@@ -39,8 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider 
           attribute="class" 
-          defaultTheme="system" 
-          enableSystem
+          defaultTheme="dark" 
+          enableSystem={false}
         >
           {/* Register PWA Service Worker on client only */}
           <PwaRegister />

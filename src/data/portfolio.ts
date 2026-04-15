@@ -5,11 +5,11 @@ export const portfolioData: PortfolioData = {
   title: 'Senior Software Engineer',
   location: 'Singapore',
   summary:
-    'Senior Software Engineer with 6+ years of experience building scalable web applications and cloud-native solutions. Currently driving platform optimization at SPH Media. Proven track record in improving system performance (reducing API latency, optimizing AWS resources) and boosting developer productivity through CI/CD and rigorous testing standards. Expert in React, Node.js, Python, and AWS architecture.',
-  
+    'Senior Software Engineer with 6+ years of experience building scalable web applications and cloud-native solutions. Expert in React, Node.js, and AWS architecture. Proven track record in modernizing legacy systems, including large-scale monorepo migrations and Java version upgrades. Passionate about edge computing, serverless architectures, and building secure, high-performance full-stack applications.',
+
   experiences: [
     {
-      company: 'SPH Media',
+      company: 'SPH Media (Via Ploy Asia)',
       location: 'Singapore',
       period: 'May 2025 - Present',
       role: 'Senior Software Engineer',
@@ -17,15 +17,30 @@ export const portfolioData: PortfolioData = {
         'React',
         'Node.js',
         'TypeScript',
-        'Python',
+        'Java 17',
+        'pnpm Monorepo',
         'AWS (Lambda, OpenSearch)',
-        'Docker',
         'Terraform',
+        'Docker'
       ],
       achievements: [
-        'Resolved critical latency alerts for high-traffic AWS Lambda APIs by re-architecting OpenSearch queries and implementing aggressive caching strategies, significantly improving API response times and system stability.',
-        'Championed engineering excellence by refactoring legacy codebases and establishing comprehensive testing suites; increased test coverage substantially, ensuring safer deployments and fewer production regressions.',
-        'Elevated Developer Experience (DX) by modularizing complex logic and integrating Infrastructure as Code (Terraform), streamlining the development workflow for the broader team.',
+        'Architected and migrated fragmented microservices into a high-performance pnpm monorepo, consolidating Lambda functions, documentation, and testing suites into a unified workspace, enhancing code reusability and development speed by 40%.',
+        'Successfully led the critical system migration of legacy Java services to Java 17, ensuring security compliance, long-term maintainability, and improved runtime performance.',
+        'Resolved critical latency alerts for high-traffic AWS Lambda APIs by re-architecting OpenSearch queries and implementing aggressive caching strategies, significantly reducing API response times.',
+        'Championed engineering excellence by refactoring legacy codebases and establishing rigorous CI/CD benchmarks using Terraform for predictable Infrastructure as Code (IaC) deployments.',
+      ],
+    },
+    {
+      company: 'Freelance Software Engineering',
+      location: 'Remote',
+      period: '2025 - Present',
+      role: 'Full Stack Consultant',
+      techStack: ['AWS Amplify', 'Lambda', 'DynamoDB', 'Cognito', 'S3 / CloudFront', 'Next.js'],
+      achievements: [
+        'E-commerce Transformation: Developed a fully serverless e-commerce platform for a prominent Taiwan-based F&B chain (Fried Chicken) using AWS Amplify, Lambda, and DynamoDB to support scalable retail operations.',
+        'Security & Identity: Implemented secure user authentication and Role-Based Access Control (RBAC) via AWS Cognito, ensuring safe administrative access for order management and inventory control.',
+        'Optimized Delivery: Deployed a responsive frontend via S3 and CloudFront, ensuring low-latency content delivery and stable performance during peak traffic periods.',
+        'End-to-End Delivery: Managed the full SDLC for regional SMEs, translating complex business requirements into technical solutions that digitized traditional retail workflows.',
       ],
     },
     {
@@ -35,7 +50,7 @@ export const portfolioData: PortfolioData = {
       role: 'Software Engineer (Contract)',
       techStack: ['Python', 'GitHub Actions', 'Tableau', 'SQL'],
       achievements: [
-        'Architected and automated CI/CD pipelines for enterprise visualization platforms using Python and GitHub Actions, reducing manual deployment efforts.',
+        'Architected and automated CI/CD pipelines for enterprise visualization platforms using Python and GitHub Actions, significantly reducing manual deployment efforts and operational risks.',
         'Led the migration and integration of enterprise applications by developing REST API automation scripts, streamlining Tableau workbook operations across the organization.',
         'Provided Level 3 application support for critical enterprise systems (MS SQL, Oracle), ensuring high availability and conducting user training to facilitate system adoption.',
       ],
@@ -47,11 +62,11 @@ export const portfolioData: PortfolioData = {
       role: 'Senior Software Engineer (Full Stack)',
       techStack: ['Next.js', 'React', 'GraphQL', 'AWS', 'Python Flask', 'NX Monorepo'],
       achievements: [
-        'Full-Stack Performance Optimization: Spearheaded the development of scalable features using Next.js, React.js, and GraphQL on AWS; revamped the core homepage to significantly enhance UI/UX, SEO, and web performance in partnership with the marketing team.',
-        'System Efficiency & Scalability: Engineered a multi-threaded image processing server using Python Flask, successfully reducing processing time by 30% and optimizing CPU utilization for high-volume traffic.',
-        'Engineering Productivity & DevOps: Doubled team execution efficiency by integrating NX monorepo into the development workflow and automating manual processes.',
-        'Data-Driven Growth: Integrated comprehensive analytics suites (Google Analytics, GTM, Adobe Analytics, Meta Pixel) to enable data-driven decision-making for product features.',
-        'Leadership & Mentorship: Mentored engineering interns to foster professional growth and delivered strategic technical insights during monthly all-hands meetings to align engineering goals with business objectives.',
+        'Full-Stack Performance Optimization: Spearheaded the development of scalable features using Next.js and GraphQL on AWS; revamped the core homepage to significantly enhance UI/UX and SEO (30% Core Web Vitals improvement) in partnership with marketing.',
+        'System Efficiency & Scalability: Engineered a multi-threaded image processing server using Python Flask, reducing processing time by 30% and optimizing CPU utilization for high-volume traffic.',
+        'Engineering Productivity & DevOps: Doubled team execution efficiency by integrating NX monorepo into the development workflow and automating manual deployment processes.',
+        'Data-Driven Growth: Integrated comprehensive analytics suites (GA, GTM, Adobe Analytics, Meta Pixel) to enable data-driven decision-making for product features.',
+        'Leadership & Mentorship: Mentored engineering interns to foster professional growth and delivered strategic technical insights during all-hands meetings to align engineering goals with business objectives.',
       ],
     },
     {
@@ -61,93 +76,90 @@ export const portfolioData: PortfolioData = {
       role: 'Software Engineer',
       techStack: ['Node.js', 'PostgreSQL', 'TypeScript', 'React.js', 'CI/CD'],
       achievements: [
-        'Led end-to-end product development for a healthcare platform, architecting a scalable RESTful API with Node.js, PostgreSQL, and TypeScript, directly supporting business growth targets.',
-        'Engineered a secure payment infrastructure by integrating global gateways (Stripe, AliPay) and fortifying the system against SQL injection and XSS vulnerabilities.',
-        'Modernized the deployment workflow by implementing automated CI/CD pipelines (CircleCI, BitBucket) on AWS, reducing manual deployment errors and accelerating release cycles.',
-        'Developed a responsive frontend application using React.js and TypeScript, collaborating closely with UX designers to deliver user-centric features.',
-      ],
-    },
-    {
-      company: 'Yang Ming Tec Computer Inc.',
-      location: 'Taiwan',
-      period: 'Mar 2016 - Apr 2017',
-      role: 'Software Engineer',
-      techStack: ['.NET', 'Oracle'],
-      achievements: [
-        'Developed a comprehensive Medical ERP system for local hospitals using .NET, streamlining routine clinical operations and administrative workflows.',
-        'Optimized database performance by managing and architecting complex schemas within an Oracle environment, ensuring high data integrity and efficient retrieval for medical records.',
+        'Led end-to-end product development for a healthcare platform, architecting a scalable RESTful API with Node.js and PostgreSQL to support business growth.',
+        'Engineered a secure payment infrastructure by integrating global gateways (Stripe, AliPay) and fortifying the system with data encryption against SQL injection and XSS vulnerabilities.',
+        'Modernized deployment workflows by implementing automated CI/CD pipelines (CircleCI, BitBucket) on AWS, reducing manual deployment errors by 80% and accelerating release cycles.',
+        'Collaborated closely with UX designers to deliver user-centric features and accessible interfaces using React.js and TypeScript.',
       ],
     },
   ],
-  
+
+  projects: [
+    {
+      title: 'Edge-Based Stock Monitoring System',
+      description: 'A serverless financial data platform built on Cloudflare Workers for real-time stock analysis and tracking.',
+      techStack: ['Cloudflare Workers', 'D1', 'KV Storage', 'GitHub Actions', 'Hugging Face'],
+      achievements: [
+        'Architected a serverless data pipeline using GitHub Actions to automate daily stock data ingestion into Cloudflare D1 (SQL).',
+        'Implemented a low-latency caching layer using Cloudflare KV for frequently accessed market indicators.',
+        'Integrated Hugging Face Inference API to provide real-time price trend insights directly on the edge.',
+      ]
+    },
+    {
+      title: 'Drip Coffee Brew Timer',
+      description: 'A minimalist, precision-focused brewing utility for specialty coffee enthusiasts.',
+      techStack: ['Next.js', 'TypeScript', 'Cloudflare Pages'],
+      achievements: [
+        'Designed a high-performance, mobile-first web utility using Next.js and TypeScript, optimized for instantaneous load times on the edge via Cloudflare.',
+        'Implemented precision timing logic and interactive UI components to guide users through complex brewing recipes.',
+        'Focused on zero-latency user experience and minimalist design principles for real-world usability.',
+      ]
+    }
+  ],
+
   skills: [
     {
       category: 'Frontend',
       items: [
-        { name: 'HTML5', rating: 5 },
-        { name: 'CSS3', rating: 5 },
-        { name: 'JavaScript (ES6+)', rating: 5 },
-        { name: 'TypeScript', rating: 5 },
-        { name: 'React.js', rating: 5 },
-        { name: 'Next.js', rating: 5 },
+        { name: 'React / Next.js', rating: 4 },
+        { name: 'TypeScript', rating: 4 },
+        { name: 'GraphQL', rating: 4 },
         { name: 'Redux', rating: 4 },
         { name: 'Tailwind CSS', rating: 4 },
-        { name: 'GraphQL', rating: 4 },
       ],
     },
     {
       category: 'Backend',
       items: [
-        { name: 'Node.js', rating: 5 },
-        { name: 'Express', rating: 4 },
-        { name: 'Python', rating: 4 },
-        { name: 'Python Flask', rating: 4 },
-        { name: 'Java', rating: 3 },
-        { name: 'Spring Boot', rating: 3 },
-        { name: 'GraphQL', rating: 4 },
+        { name: 'Node.js', rating: 4 },
+        { name: 'Python / Flask', rating: 4 },
+        { name: 'Java 17 / Spring', rating: 3 },
+        { name: 'Cloudflare Workers (Edge)', rating: 4 },
+        { name: 'AWS Lambda / Serverless', rating: 4 },
       ],
     },
     {
       category: 'Cloud & DevOps',
       items: [
-        { name: 'AWS (Lambda, OpenSearch, DynamoDB)', rating: 4 },
+        { name: 'AWS (Amplify, Cognito, S3, DynamoDB, Lambda)', rating: 4 },
+        { name: 'Terraform / IaC', rating: 4 },
+        { name: 'GitHub Actions / CI/CD', rating: 5 },
+        { name: 'pnpm / NX Monorepo', rating: 5 },
         { name: 'Docker', rating: 4 },
-        { name: 'Terraform', rating: 4 },
-        { name: 'CI/CD (GitHub Actions, CircleCI)', rating: 5 },
-        { name: 'NX Monorepo', rating: 4 },
       ],
     },
     {
       category: 'Database',
       items: [
-        { name: 'PostgreSQL', rating: 4 },
-        { name: 'SQL', rating: 4 },
-        { name: 'MongoDB', rating: 3 },
-        { name: 'Oracle', rating: 3 },
-      ],
-    },
-    {
-      category: 'Tools',
-      items: [
-        { name: 'Git', rating: 5 },
-        { name: 'Jest', rating: 4 },
-        { name: 'Google Analytics', rating: 3 },
-        { name: 'Tableau', rating: 3 },
+        { name: 'PostgreSQL / SQL', rating: 4 },
+        { name: 'DynamoDB (NoSQL)', rating: 4 },
+        { name: 'Cloudflare D1 / KV', rating: 4 },
+        { name: 'OpenSearch', rating: 4 },
       ],
     },
     {
       category: 'Soft Skills',
       items: [
-        { name: 'Collaboration', rating: 4 },
+        { name: 'Collaboration', rating: 5 },
         { name: 'Problem Solving', rating: 5 },
         { name: 'Adaptability', rating: 4 },
-        { name: 'Leadership', rating: 4 },
+        { name: 'Leadership & Mentorship', rating: 4 },
         { name: 'Communication', rating: 4 },
-        { name: 'Time Management', rating: 4 },
+        { name: 'Stakeholder Management', rating: 4 },
       ],
     },
   ],
-  
+
   education: [
     {
       institution: 'National Chiao Tung University',
@@ -160,9 +172,9 @@ export const portfolioData: PortfolioData = {
       period: '2010 - 2014',
     },
   ],
-  
+
   contact: {
-    email: 'el2k6xjp6@gmail.com',
+    email: 'deron@el2k6xjp6.com',
     linkedin: 'https://linkedin.com/in/el2k6xjp6',
   },
 };

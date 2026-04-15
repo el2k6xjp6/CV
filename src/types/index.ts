@@ -21,12 +21,20 @@ export interface Education {
   period: string;
 }
 
+export interface Project {
+  title: string;
+  description: string;
+  techStack: string[];
+  achievements: string[];
+}
+
 export interface PortfolioData {
   name: string;
   title: string;
   location: string;
   summary: string;
   experiences: Experience[];
+  projects: Project[];
   skills: Skill[];
   education: Education[];
   contact: {

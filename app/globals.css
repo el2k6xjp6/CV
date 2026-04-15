@@ -9,11 +9,11 @@
 }
 
 :root {
-  --bg-page: #f9fafb;     /* zinc-50 */
-  --bg-card: #ffffff;     /* white */
-  --text-main: #18181b;   /* zinc-900 */
-  --text-muted: #71717a;  /* zinc-500 */
-  --border-subtle: #e4e4e7;
+  --bg-page: #e9eaec;     /* cool gray — distinct from cards */
+  --bg-card: #ffffff;     /* white cards pop against page */
+  --text-main: #0f0f10;   /* near-black for strong contrast */
+  --text-muted: #52525b;  /* zinc-600 — darker than before */
+  --border-subtle: #c4c4c8; /* clearly visible card borders */
 }
 
 .dark {
