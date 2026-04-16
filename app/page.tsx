@@ -13,9 +13,9 @@ export default function Home() {
     <div className="min-h-screen bg-bg-page text-text-main font-sans relative">
       {/* Sticky Header */}
       <header className="sticky top-0 z-20 w-full backdrop-blur-md bg-bg-page/70 border-b border-border-subtle shadow-sm">
-        <nav className="max-w-3xl mx-auto flex items-center justify-between py-4 px-6">
-          <span className="font-bold text-xl tracking-tight">Deron Kao</span>
-          <ul className="flex gap-6 text-sm font-medium">
+        <nav className="max-w-3xl mx-auto flex items-center justify-between py-4 px-6 gap-4 overflow-x-auto">
+          <span className="font-bold text-xl tracking-tight flex-shrink-0">Deron Kao</span>
+          <ul className="flex gap-6 text-sm font-medium flex-nowrap overflow-x-auto md:overflow-x-visible scrollbar-hide">
             <li>
               <button
                 type="button"
