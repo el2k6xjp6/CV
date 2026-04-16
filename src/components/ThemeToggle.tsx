@@ -13,7 +13,7 @@ export default function ThemeToggle() {
   const isMounted = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   
   if (!isMounted) {
-    return <div className="w-20 h-10" aria-hidden="true" />;
+    return <div className="w-[80px] h-10 flex-shrink-0" aria-hidden="true" />;
   }
 
   const isDark = resolvedTheme === "dark";
@@ -24,7 +24,7 @@ export default function ThemeToggle() {
       aria-label={isDark ? "切換至淺色模式" : "切換至深色模式"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
       // 設定 p-1 (4px) 的內距，讓滑塊與邊框保持安全距離
-      className="group relative w-20 h-10 rounded-full border-2 border-indigo-500 bg-zinc-100 dark:bg-zinc-900 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 p-1"
+      className="group relative w-[80px] h-10 flex-shrink-0 rounded-full border-2 border-indigo-500 bg-zinc-100 dark:bg-zinc-900 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 p-1"
     >
       {/* 內部滑動軌道 */}
       <div className="relative w-full h-full flex items-center">
