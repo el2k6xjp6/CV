@@ -57,10 +57,12 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
                     ))}
                 </section>
 
-                {/* 列表內容：改用 text-text-main 或 text-text-muted */}
-                <ul className="list-disc pl-5 space-y-2 text-text-muted text-sm">
+                <ul className="space-y-2 text-text-muted text-sm">
                     {experience.achievements.map((ach, idx) => (
-                        <li key={idx} className="marker:text-indigo-500">{ach}</li>
+                        <li key={idx} className="flex gap-2">
+                            <span className="text-indigo-500 font-mono flex-shrink-0 select-none">›</span>
+                            <span>{ach}</span>
+                        </li>
                     ))}
                 </ul>
             </article>

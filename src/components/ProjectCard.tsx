@@ -42,10 +42,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     ))}
                 </section>
 
-                {/* Achievements */}
-                <ul className="list-disc pl-5 space-y-2 text-text-muted text-sm">
+                <ul className="space-y-2 text-text-muted text-sm">
                     {project.achievements.map((achievement, idx) => (
-                        <li key={idx} className="marker:text-indigo-500">{achievement}</li>
+                        <li key={idx} className="flex gap-2">
+                            <span className="text-indigo-500 font-mono flex-shrink-0 select-none">›</span>
+                            <span>{achievement}</span>
+                        </li>
                     ))}
                 </ul>
             </article>

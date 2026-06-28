@@ -31,6 +31,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Blinking cursor for terminal hero */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-start infinite;
+}
+
 /* Hide scrollbar while keeping scrolling functional */
 .scrollbar-hide {
   -ms-overflow-style: none;  /* IE and Edge */
