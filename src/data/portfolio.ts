@@ -113,7 +113,7 @@ export const portfolioData: PortfolioData = {
     {
       category: 'Frontend',
       items: [
-        { name: 'React / Next.js', rating: 4 },
+        { name: 'React/Next.js', rating: 4 },
         { name: 'TypeScript', rating: 4 },
         { name: 'GraphQL', rating: 4 },
         { name: 'Tailwind CSS', rating: 4 },
@@ -124,28 +124,28 @@ export const portfolioData: PortfolioData = {
       items: [
         { name: 'Node.js', rating: 4 },
         { name: 'Python / Flask', rating: 4 },
-        { name: 'Java 17 / Spring', rating: 3 },
-        { name: 'Cloudflare Workers (Edge)', rating: 4 },
-        { name: 'AWS Lambda / Serverless', rating: 4 },
+        { name: 'Java / Spring', rating: 3 },
+        { name: 'CF Workers', rating: 4 },
+        { name: 'AWS Lambda', rating: 4 },
       ],
     },
     {
       category: 'Cloud & DevOps',
       items: [
-        { name: 'AWS (Amplify, Cognito, S3, DynamoDB, Lambda)', rating: 4 },
-        { name: 'Terraform / IaC', rating: 4 },
-        { name: 'GitHub Actions / CI/CD', rating: 5 },
-        { name: 'pnpm / NX Monorepo', rating: 5 },
+        { name: 'AWS', rating: 4 },
+        { name: 'Terraform', rating: 4 },
+        { name: 'GitHub Actions', rating: 5 },
+        { name: 'Monorepos', rating: 5 },
         { name: 'Docker', rating: 4 },
-        { name: 'Observability (Sentry, OpenTelemetry, CloudWatch)', rating: 4 },
+        { name: 'Observability', rating: 4 },
       ],
     },
     {
       category: 'Database',
       items: [
-        { name: 'PostgreSQL / SQL', rating: 4 },
-        { name: 'DynamoDB (NoSQL)', rating: 4 },
-        { name: 'Cloudflare D1 / KV', rating: 4 },
+        { name: 'PostgreSQL', rating: 4 },
+        { name: 'DynamoDB', rating: 4 },
+        { name: 'Cloudflare D1', rating: 4 },
         { name: 'OpenSearch', rating: 4 },
       ],
     },
