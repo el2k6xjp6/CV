@@ -50,3 +50,16 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
+
+/* Printed CV (Export PDF): plain A4 page, always black on white */
+@page {
+  size: A4;
+  margin: 14mm 16mm;
+}
+
+@media print {
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}

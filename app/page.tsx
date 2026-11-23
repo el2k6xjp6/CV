@@ -6,10 +6,14 @@ import { SkillsGrid } from '@/components/SkillsGrid';
 import { Linkedin, Mail } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
 import NavLinks from '@/components/NavLinks';
+import ExportPdfButton from '@/components/ExportPdfButton';
+import { ResumePrint } from '@/components/ResumePrint';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-bg-page text-text-main font-sans relative">
+    <>
+    <ResumePrint />
+    <div className="min-h-screen bg-bg-page text-text-main font-sans relative print:hidden">
       {/* Sticky Header */}
       <header className="sticky top-0 z-20 w-full backdrop-blur-md bg-bg-page/70 border-b border-border-subtle shadow-sm">
         <nav className="max-w-3xl mx-auto flex items-center justify-between py-4 px-6 gap-4 overflow-x-auto">
@@ -17,7 +21,10 @@ export default function Home() {
             <span className="text-text-muted">~/</span>deron
           </span>
           <NavLinks />
-          <ThemeToggle />
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <ExportPdfButton />
+            <ThemeToggle />
+          </div>
         </nav>
       </header>
 
@@ -134,5 +141,6 @@ export default function Home() {
         </span>
       </footer>
     </div>
+    </>
   );
 }
