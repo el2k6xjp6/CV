@@ -21,15 +21,15 @@ export default function ThemeToggle() {
   return (
     <button
       type="button"
-      aria-label={isDark ? "切換至淺色模式" : "切換至深色模式"}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      // 設定 p-1 (4px) 的內距，讓滑塊與邊框保持安全距離
+      // p-1 (4px) padding keeps the slider clear of the border
       className="group relative w-[80px] h-10 flex-shrink-0 rounded-full border-2 border-indigo-500 bg-zinc-100 dark:bg-zinc-900 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 p-1"
     >
-      {/* 內部滑動軌道 */}
+      {/* Slider track */}
       <div className="relative w-full h-full flex items-center">
         
-        {/* 滑動圓圈 (Slider) */}
+        {/* Slider knob */}
         <div
           className={`
             w-7 h-7 flex items-center justify-center rounded-full 
@@ -41,9 +41,8 @@ export default function ThemeToggle() {
             }
           `}
           style={{
-            // 精確位移計算：
-            // 容器寬度 80px - 兩邊邊框 4px - 兩邊內距 8px = 剩餘空間 68px
-            // 滑塊 28px (w-7)，所以滑動距離 = 68 - 28 = 40px
+            // Travel distance: 80px width - 4px borders - 8px padding = 68px track;
+            // knob is 28px (w-7), so it slides 68 - 28 = 40px
             transform: isDark ? 'translateX(40px)' : 'translateX(0px)'
           }}
         >
@@ -54,14 +53,14 @@ export default function ThemeToggle() {
           )}
         </div>
 
-        {/* 裝飾性背景圖示 (固定在左右兩側) */}
+        {/* Decorative background icons, pinned to each side */}
         <div className="absolute inset-0 flex justify-between items-center px-2 pointer-events-none">
           <Sun className={`w-3.5 h-3.5 text-yellow-500/30 transition-opacity ${isDark ? 'opacity-100' : 'opacity-0'}`} />
           <Moon className={`w-3.5 h-3.5 text-indigo-400/30 transition-opacity ${isDark ? 'opacity-0' : 'opacity-100'}`} />
         </div>
       </div>
 
-      <span className="sr-only">切換主題</span>
+      <span className="sr-only">Toggle theme</span>
     </button>
   );
 }

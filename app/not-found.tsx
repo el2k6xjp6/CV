@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Home, ArrowLeft } from 'lucide-react';
+import { portfolioData } from '@/data/portfolio';
 
 export default function NotFound() {
   return (
@@ -43,10 +44,10 @@ export default function NotFound() {
           <p className="text-sm text-zinc-500 dark:text-zinc-500">
             If you believe this is an error, please{' '}
             <a
-              href="mailto:contact@deronkao.com"
+              href={`mailto:${portfolioData.contact.email}`}
               className="text-indigo-600 dark:text-indigo-400 hover:underline"
             >
-              contact us
+              let me know
             </a>
             .
           </p>

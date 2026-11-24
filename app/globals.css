@@ -17,10 +17,10 @@
 }
 
 .dark {
-  --bg-page: #000000;     /* 純黑 */
-  --bg-card: #121212;     /* 極深灰（比背景亮一點點） */
-  --text-main: #f4f4f5;   /* 亮灰，解決字看不到的問題 */
-  --text-muted: #a1a1aa;  /* 中灰 */
+  --bg-page: #000000;     /* pure black */
+  --bg-card: #121212;     /* very dark gray, just lighter than the page */
+  --text-main: #f4f4f5;   /* light gray for readable text */
+  --text-muted: #a1a1aa;  /* mid gray */
   --border-subtle: #27272a;
 }
 
