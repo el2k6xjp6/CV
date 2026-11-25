@@ -5,7 +5,8 @@ import { portfolioData } from '@/data/portfolio';
  * printing, so "Save as PDF" produces a clean, text-selectable (ATS-friendly) document.
  */
 export function ResumePrint() {
-  const { name, title, location, summary, experiences, projects, skills, education, contact } = portfolioData;
+  // Projects stay on the website only, keeping the PDF to two pages.
+  const { name, title, location, summary, experiences, skills, education, contact } = portfolioData;
 
   return (
     <div className="print-page hidden print:block bg-white text-black font-sans text-[10.5pt] leading-snug">
@@ -31,18 +32,6 @@ export function ResumePrint() {
             <p className="italic text-[9.5pt]">{exp.location} · {exp.techStack.join(', ')}</p>
             <ul className="list-disc pl-5 mt-1 space-y-0.5">
               {exp.achievements.map((a) => <li key={a}>{a}</li>)}
-            </ul>
-          </div>
-        ))}
-      </PrintSection>
-
-      <PrintSection title="Projects">
-        {projects.map((p) => (
-          <div key={p.title} className="mb-3 break-inside-avoid">
-            <span className="font-bold">{p.title}</span>
-            <p className="italic text-[9.5pt]">{p.description} · {p.techStack.join(', ')}</p>
-            <ul className="list-disc pl-5 mt-1 space-y-0.5">
-              {p.achievements.map((a) => <li key={a}>{a}</li>)}
             </ul>
           </div>
         ))}
