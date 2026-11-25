@@ -72,4 +72,13 @@ Edit `src/data/portfolio.ts`. The page and the PDF export both read from it.
 
 ## Deployment
 
-Hosted on Cloudflare Pages with build command `pnpm build`.
+The site is a static export (`output: "export"` in `next.config.ts`), so `pnpm build` writes everything to `out/`.
+
+Cloudflare Pages build settings:
+
+- **Framework preset**: None
+- **Build command**: `pnpm build`
+- **Build output directory**: `out`
+- **Node version**: from `.nvmrc` (24)
+
+Every push to `master` triggers a deploy.
