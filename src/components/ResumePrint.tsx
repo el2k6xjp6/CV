@@ -8,7 +8,7 @@ export function ResumePrint() {
   const { name, title, location, summary, experiences, projects, skills, education, contact } = portfolioData;
 
   return (
-    <div className="hidden print:block bg-white text-black font-sans text-[10.5pt] leading-snug">
+    <div className="print-page hidden print:block bg-white text-black font-sans text-[10.5pt] leading-snug">
       <header className="mb-4 border-b border-black pb-2">
         <h1 className="text-[20pt] font-bold leading-tight">{name}</h1>
         <p className="text-[11pt]">{title} · {location}</p>

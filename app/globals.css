@@ -51,15 +51,24 @@ body {
   display: none; /* Chrome, Safari and Opera */
 }
 
-/* Printed CV (Export PDF): plain A4 page, always black on white */
+/* Printed CV (Export PDF): plain A4 page, always black on white.
+   Zero page margin stops the browser printing its own header/footer
+   (date, title, URL, page number) in the margin area; the spacing is
+   applied as padding instead, cloned onto every printed page. */
 @page {
   size: A4;
-  margin: 14mm 16mm;
+  margin: 0;
 }
 
 @media print {
   html, body {
     background: #ffffff !important;
     color: #000000 !important;
+  }
+
+  .print-page {
+    padding: 14mm 16mm;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 }
