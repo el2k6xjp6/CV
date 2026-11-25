@@ -9,7 +9,7 @@ export const portfolioData: PortfolioData = {
 
   experiences: [
     {
-      company: 'SPH Media (via Ploy Asia)',
+      company: 'SPH Media (via Base Camp Digital)',
       location: 'Singapore',
       period: 'May 2025 - Present',
       role: 'Senior Software Engineer',
