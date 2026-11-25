@@ -5,7 +5,7 @@ export const portfolioData: PortfolioData = {
   title: 'Senior Software Engineer',
   location: 'Singapore',
   summary:
-    'Senior Software Engineer with 6+ years of experience building scalable web applications and cloud-native platforms with React, Node.js, TypeScript, and AWS. Experienced in owning high-traffic serverless APIs, modernizing legacy systems through monorepo migrations and runtime upgrades, and leading security remediation across large codebases. Recently focused on data pipelines that prepare content for LLM use, and on CI/CD and developer tooling that help teams ship safely.',
+    'Software engineer with 6+ years building scalable web applications and cloud-native platforms with TypeScript, Node.js, React, and AWS. Owns high-traffic serverless APIs end to end, from performance tuning and monitoring to production validation. Drives engineering standards across teams through monorepo migrations, runtime upgrades, security remediation, and reusable CI/CD, plus automation such as LLM data pipelines and AI-assisted PR review.',
 
   experiences: [
     {
