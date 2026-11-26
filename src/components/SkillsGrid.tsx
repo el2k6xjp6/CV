@@ -1,5 +1,6 @@
 import React from 'react';
 import { Skill } from '@/types';
+import { toCodeLabel } from '@/lib/format';
 
 interface SkillsGridProps {
   skills: Skill[];
@@ -25,10 +26,10 @@ function RatingBar({ rating, total = 5 }: { rating: number; total?: number }) {
 export const SkillsGrid: React.FC<SkillsGridProps> = ({ skills }) => (
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
     {skills.map((skill) => (
-      <div key={skill.category} className="skill-card rounded-xl border border-border-subtle bg-bg-page p-5 shadow-sm flex flex-col gap-2 transition-all duration-200 hover:scale-105 hover:shadow-xl">
+      <div key={skill.category} className="rounded-xl border border-border-subtle bg-bg-page p-5 shadow-sm flex flex-col gap-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
         <h4 className="font-mono font-semibold text-sm text-indigo-500 mb-2 flex items-center gap-1">
           <span className="text-text-muted">[</span>
-          {skill.category.toLowerCase().replace(' ', '_')}
+          {toCodeLabel(skill.category)}
           <span className="text-text-muted">]</span>
         </h4>
 

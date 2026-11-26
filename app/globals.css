@@ -17,10 +17,10 @@
 }
 
 .dark {
-  --bg-page: #000000;     /* 純黑 */
-  --bg-card: #121212;     /* 極深灰（比背景亮一點點） */
-  --text-main: #f4f4f5;   /* 亮灰，解決字看不到的問題 */
-  --text-muted: #a1a1aa;  /* 中灰 */
+  --bg-page: #000000;     /* pure black */
+  --bg-card: #121212;     /* very dark gray, just lighter than the page */
+  --text-main: #f4f4f5;   /* light gray for readable text */
+  --text-muted: #a1a1aa;  /* mid gray */
   --border-subtle: #27272a;
 }
 
@@ -51,101 +51,24 @@ body {
   display: none; /* Chrome, Safari and Opera */
 }
 
-/* Print / PDF export */
+/* Printed CV (Export PDF): plain A4 page, always black on white.
+   Zero page margin stops the browser printing its own header/footer
+   (date, title, URL, page number) in the margin area; the spacing is
+   applied as padding instead, cloned onto every printed page. */
 @page {
-  margin: 10mm 12mm;
+  size: A4;
+  margin: 0;
 }
 
 @media print {
-  * {
-    animation: none !important;
-    transition: none !important;
-    box-shadow: none !important;
-    /* backgrounds (e.g. filled skill rating bars) are stripped by default when printing */
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
   html, body {
     background: #ffffff !important;
-    color: #0f0f10 !important;
+    color: #000000 !important;
   }
 
-  /* Export is always light mode with a single flat white background —
-     the alternating bg-page/bg-card stripe used on-screen for visual
-     rhythm just looks like a rendering bug on paper */
-  html,
-  .dark {
-    --bg-page: #ffffff;
-    --bg-card: #ffffff;
-    --text-main: #0f0f10;
-    --text-muted: #52525b;
-    --border-subtle: #d4d4d8;
-  }
-
-  /* the root wrapper forces min-height: 100vh, which pads a mostly-empty
-     final viewport-height page onto the PDF */
-  .min-h-screen {
-    min-height: 0 !important;
-  }
-
-  header,
-  footer,
-  .timeline-line {
-    display: none !important;
-  }
-
-  .cursor-blink,
-  .animate-ping {
-    display: none !important;
-  }
-
-  /* framer-motion sets inline opacity:0/transform until scrolled into view,
-     which never happens during print — force everything visible */
-  .motion-card {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  /* avoid splitting a single card across a page break, but let long
-     sections (many cards) flow across pages instead of jumping whole */
-  article,
-  .skill-card {
-    break-inside: avoid;
-  }
-
-  /* Compact, simplified layout for paper: less padding, no shadows/pills,
-     no decorative timeline offset */
-  section {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
-
-  section h2 {
-    margin-bottom: 0.75rem !important;
-    font-size: 1.25rem !important;
-  }
-
-  article {
-    padding: 1rem !important;
-    margin-bottom: 0.6rem !important;
-    margin-left: 0 !important;
-    border-radius: 0.5rem !important;
-  }
-
-  article ul {
-    gap: 0.35rem !important;
-  }
-
-  article li {
-    margin-bottom: 0 !important;
-  }
-
-  /* Flatten the colored pill/badge chrome to plain, ink-light text tags */
-  article span.rounded-full,
-  article span.rounded {
-    background: transparent !important;
-    border-color: #d4d4d8 !important;
-    padding: 0.1rem 0.4rem !important;
+  .print-page {
+    padding: 14mm 16mm;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 }

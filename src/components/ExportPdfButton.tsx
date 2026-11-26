@@ -1,17 +1,27 @@
 "use client";
 
-import { Download } from 'lucide-react';
+import { FileDown } from "lucide-react";
+
+const PDF_FILE_NAME = "Deron_Kao_CV";
 
 export default function ExportPdfButton() {
+  const handleExport = () => {
+    // The browser uses the document title as the default PDF file name.
+    const originalTitle = document.title;
+    document.title = PDF_FILE_NAME;
+    window.addEventListener("afterprint", () => { document.title = originalTitle; }, { once: true });
+    window.print();
+  };
+
   return (
     <button
       type="button"
-      aria-label="Export as PDF"
-      onClick={() => window.print()}
-      className="print:hidden flex-shrink-0 flex items-center gap-1.5 h-9 px-3 rounded-full border border-indigo-500 text-indigo-500 text-xs font-mono hover:bg-indigo-500 hover:text-white transition-colors duration-200"
+      onClick={handleExport}
+      aria-label="Export CV as PDF"
+      title="Export CV as PDF"
+      className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border-2 border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400"
     >
-      <Download size={14} />
-      <span className="hidden sm:inline">Export PDF</span>
+      <FileDown className="w-4 h-4" />
     </button>
   );
 }

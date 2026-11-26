@@ -7,11 +7,13 @@ import { Linkedin, Mail } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
 import NavLinks from '@/components/NavLinks';
 import ExportPdfButton from '@/components/ExportPdfButton';
-import ExportTextButton from '@/components/ExportTextButton';
+import { ResumePrint } from '@/components/ResumePrint';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-bg-page text-text-main font-sans relative">
+    <>
+    <ResumePrint />
+    <div className="min-h-screen bg-bg-page text-text-main font-sans relative print:hidden">
       {/* Sticky Header */}
       <header className="sticky top-0 z-20 w-full backdrop-blur-md bg-bg-page/70 border-b border-border-subtle shadow-sm">
         <nav className="max-w-3xl mx-auto flex items-center justify-between py-4 px-6 gap-4">
@@ -21,8 +23,7 @@ export default function Home() {
           <div className="flex-1 min-w-0 overflow-x-auto scrollbar-hide">
             <NavLinks />
           </div>
-          <div className="flex items-center gap-3 flex-shrink-0">
-            <ExportTextButton />
+          <div className="flex items-center gap-2 flex-shrink-0">
             <ExportPdfButton />
             <ThemeToggle />
           </div>
@@ -48,13 +49,13 @@ export default function Home() {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-1 flex items-end gap-2">
-            {portfolioData.title.split(' ').slice(0, 2).join(' ')}
+            {portfolioData.name}
             <span className="inline-block w-[3px] h-[0.85em] mb-1 bg-indigo-500 cursor-blink align-bottom" aria-hidden="true" />
           </h1>
 
           {/* Role as comment */}
           <p className="font-mono text-base text-text-muted mb-3">
-            <span className="text-indigo-500">//</span> {portfolioData.title}
+            <span className="text-indigo-500">{'//'}</span> {portfolioData.title}
           </p>
 
           {/* Available badge */}
@@ -119,7 +120,7 @@ export default function Home() {
               <li key={edu.institution + idx} className="border-l-2 border-indigo-500/60 pl-4">
                 <div className="font-mono text-sm font-medium text-text-main">{edu.institution}</div>
                 <div className="font-mono text-xs text-text-muted mt-0.5">
-                  <span className="text-indigo-500">//</span> {edu.degree} · {edu.period}
+                  <span className="text-indigo-500">{'//'}</span> {edu.degree} · {edu.period}
                 </div>
               </li>
             ))}
@@ -138,9 +139,10 @@ export default function Home() {
           </a>
         </div>
         <span className="font-mono text-xs text-text-muted">
-          <span className="text-indigo-500">©</span> {new Date().getFullYear()} Deron Kao
+          <span className="text-indigo-500">©</span> {new Date().getFullYear()} {portfolioData.name}
         </span>
       </footer>
     </div>
+    </>
   );
 }

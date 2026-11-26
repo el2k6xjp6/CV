@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import PwaRegister from "@/components/PwaRegister";
+import { portfolioData } from "@/data/portfolio";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,16 +15,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteTitle = `${portfolioData.name} - ${portfolioData.title} Portfolio`;
+
 export const metadata: Metadata = {
-  title: "Deron Kao - Senior Software Engineer Portfolio",
-  description:
-    "Senior Software Engineer with experience building scalable web applications and cloud-native solutions. Currently driving platform optimization at SPH Media. Proven track record in improving system performance and boosting developer productivity. Expert in React, Node.js, Python, and AWS architecture.",
+  title: siteTitle,
+  description: portfolioData.summary,
   openGraph: {
-    title: "Deron Kao - Senior Software Engineer Portfolio",
-    description:
-      "Senior Software Engineer with experience building scalable web applications and cloud-native solutions. Currently driving platform optimization at SPH Media. Proven track record in improving system performance and boosting developer productivity. Expert in React, Node.js, Python, and AWS architecture.",
-    url: "https://your-domain.com/",
-    siteName: "Deron Kao Portfolio",
+    title: siteTitle,
+    description: portfolioData.summary,
+    siteName: `${portfolioData.name} Portfolio`,
     locale: "en_SG",
     type: "website",
   },
