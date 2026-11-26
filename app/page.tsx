@@ -6,25 +6,33 @@ import { SkillsGrid } from '@/components/SkillsGrid';
 import { Linkedin, Mail } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
 import NavLinks from '@/components/NavLinks';
+import ExportPdfButton from '@/components/ExportPdfButton';
+import ExportTextButton from '@/components/ExportTextButton';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-bg-page text-text-main font-sans relative">
       {/* Sticky Header */}
       <header className="sticky top-0 z-20 w-full backdrop-blur-md bg-bg-page/70 border-b border-border-subtle shadow-sm">
-        <nav className="max-w-3xl mx-auto flex items-center justify-between py-4 px-6 gap-4 overflow-x-auto">
+        <nav className="max-w-3xl mx-auto flex items-center justify-between py-4 px-6 gap-4">
           <span className="font-mono font-bold text-base tracking-tight flex-shrink-0 text-indigo-500">
             <span className="text-text-muted">~/</span>deron
           </span>
-          <NavLinks />
-          <ThemeToggle />
+          <div className="flex-1 min-w-0 overflow-x-auto scrollbar-hide">
+            <NavLinks />
+          </div>
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <ExportTextButton />
+            <ExportPdfButton />
+            <ThemeToggle />
+          </div>
         </nav>
       </header>
 
       {/* Hero Section */}
       <Section title={undefined} className="bg-bg-card relative overflow-hidden" id="about">
         {/* Dot matrix background */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
+        <svg className="print:hidden absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
           <defs>
             <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
               <circle cx="1" cy="1" r="0.8" className="fill-border-subtle" opacity="0.4" />

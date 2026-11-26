@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Deron Kao - Senior Software Engineer Portfolio",
   description:
-    "Senior Software Engineer with 6+ years of experience building scalable web applications and cloud-native solutions. Currently driving platform optimization at SPH Media. Proven track record in improving system performance and boosting developer productivity. Expert in React, Node.js, Python, and AWS architecture.",
+    "Senior Software Engineer with experience building scalable web applications and cloud-native solutions. Currently driving platform optimization at SPH Media. Proven track record in improving system performance and boosting developer productivity. Expert in React, Node.js, Python, and AWS architecture.",
   openGraph: {
     title: "Deron Kao - Senior Software Engineer Portfolio",
     description:
-      "Senior Software Engineer with 6+ years of experience building scalable web applications and cloud-native solutions. Currently driving platform optimization at SPH Media. Proven track record in improving system performance and boosting developer productivity. Expert in React, Node.js, Python, and AWS architecture.",
+      "Senior Software Engineer with experience building scalable web applications and cloud-native solutions. Currently driving platform optimization at SPH Media. Proven track record in improving system performance and boosting developer productivity. Expert in React, Node.js, Python, and AWS architecture.",
     url: "https://your-domain.com/",
     siteName: "Deron Kao Portfolio",
     locale: "en_SG",

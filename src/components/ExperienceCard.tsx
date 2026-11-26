@@ -12,14 +12,14 @@ interface ExperienceCardProps {
 export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
     return (
         <motion.div
-            className="relative flex"
+            className="relative flex motion-card"
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
         >
             {/* Timeline 垂直線：改用 border-subtle */}
-            <div className="hidden sm:block absolute left-0 top-0 h-full w-6 flex justify-center">
+            <div className="timeline-line hidden sm:block absolute left-0 top-0 h-full w-6 flex justify-center">
                 <span className="w-0.5 h-full bg-border-subtle rounded-full" />
             </div>
 

@@ -10,7 +10,7 @@ const sections = [
 
 export default function NavLinks() {
   return (
-    <ul className="flex gap-6 text-sm font-medium flex-nowrap overflow-x-auto md:overflow-x-visible scrollbar-hide">
+    <ul className="flex gap-6 text-sm font-medium flex-nowrap w-max">
       {sections.map(({ id, label }) => (
         <li key={id}>
           <button

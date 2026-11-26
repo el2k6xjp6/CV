@@ -5,11 +5,11 @@ export const portfolioData: PortfolioData = {
   title: 'Senior Software Engineer',
   location: 'Singapore',
   summary:
-    'Senior Software Engineer with 6+ years of experience building scalable web applications and cloud-native solutions. Expert in React, Node.js, and AWS architecture. Proven track record in modernizing legacy systems, including large-scale monorepo migrations and Java version upgrades. Passionate about edge computing, serverless architectures, and building secure, high-performance full-stack applications.',
+    'Full Stack Software Engineer with experience owning features end-to-end across React/Next.js, Python (FastAPI/Flask), and cloud-native architectures on AWS. Proven track record shipping production systems with SQL and Python, and driving projects from ideation to completion in fast-paced, ambiguous environments. Passionate about developer experience, edge computing, and building high-performance full-stack applications.',
 
   experiences: [
     {
-      company: 'SPH Media (Via Ploy Asia)',
+      company: 'SPH Media',
       location: 'Singapore',
       period: 'May 2025 - Present',
       role: 'Senior Software Engineer',
@@ -17,11 +17,11 @@ export const portfolioData: PortfolioData = {
         'React',
         'Node.js',
         'TypeScript',
-        'Java 17',
         'pnpm Monorepo',
-        'AWS (Lambda, OpenSearch)',
+        'AWS',
+        'Java',
+        'Docker',
         'Terraform',
-        'Docker'
       ],
       achievements: [
         'Architected and migrated fragmented microservices into a high-performance pnpm monorepo, consolidating Lambda functions, documentation, and testing suites into a unified workspace, enhancing code reusability and development speed by 40%.',
@@ -44,10 +44,10 @@ export const portfolioData: PortfolioData = {
       ],
     },
     {
-      company: 'GIC (via Maltem Asia-Pacific)',
+      company: 'GIC',
       location: 'Singapore',
       period: 'Oct 2024 - May 2025',
-      role: 'Software Engineer (Contract)',
+      role: 'Software Engineer',
       techStack: ['Python', 'GitHub Actions', 'Tableau', 'SQL'],
       achievements: [
         'Architected and automated CI/CD pipelines for enterprise visualization platforms using Python and GitHub Actions, significantly reducing manual deployment efforts and operational risks.',
@@ -60,10 +60,10 @@ export const portfolioData: PortfolioData = {
       location: 'Singapore',
       period: 'May 2022 - Jul 2024',
       role: 'Senior Software Engineer (Full Stack)',
-      techStack: ['Next.js', 'React', 'GraphQL', 'AWS', 'Python Flask', 'NX Monorepo'],
+      techStack: ['Next.js', 'React', 'GraphQL', 'SWR / TanStack Query', 'AWS', 'Python (FastAPI / Flask)', 'NX Monorepo'],
       achievements: [
-        'Full-Stack Performance Optimization: Spearheaded the development of scalable features using Next.js and GraphQL on AWS; revamped the core homepage to significantly enhance UI/UX and SEO (30% Core Web Vitals improvement) in partnership with marketing.',
-        'System Efficiency & Scalability: Engineered a multi-threaded image processing server using Python Flask, reducing processing time by 30% and optimizing CPU utilization for high-volume traffic.',
+        'Full-Stack Performance Optimization: Spearheaded the development of scalable features using Next.js, GraphQL, and SWR/TanStack Query for client-side data fetching on AWS; revamped the core homepage to significantly enhance UI/UX and SEO (30% Core Web Vitals improvement) in partnership with marketing.',
+        'System Efficiency & Scalability: Engineered a multi-threaded image processing server using Python (FastAPI and Flask), reducing processing time by 30% and optimizing CPU utilization for high-volume traffic.',
         'Engineering Productivity & DevOps: Doubled team execution efficiency by integrating NX monorepo into the development workflow and automating manual deployment processes.',
         'Data-Driven Growth: Integrated comprehensive analytics suites (GA, GTM, Adobe Analytics, Meta Pixel) to enable data-driven decision-making for product features.',
         'Leadership & Mentorship: Mentored engineering interns to foster professional growth and delivered strategic technical insights during all-hands meetings to align engineering goals with business objectives.',
@@ -87,12 +87,12 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       title: 'Edge-Based Stock Monitoring System',
-      description: 'A serverless financial data platform built on Cloudflare Workers for real-time stock analysis and tracking.',
-      techStack: ['Cloudflare Workers', 'D1', 'KV Storage', 'GitHub Actions', 'Hugging Face'],
+      description: 'A serverless financial data platform built on Cloudflare Workers, serving real-time stock data and computed fundamentals (e.g. FCF) to a frontend client.',
+      techStack: ['Cloudflare Workers', 'D1 (SQL)', 'KV Storage', 'GitHub Actions'],
       achievements: [
-        'Architected a serverless data pipeline using GitHub Actions to automate daily stock data ingestion into Cloudflare D1 (SQL).',
-        'Implemented a low-latency caching layer using Cloudflare KV for frequently accessed market indicators.',
-        'Integrated Hugging Face Inference API to provide real-time price trend insights directly on the edge.',
+        'Architected a serverless data pipeline using GitHub Actions for CI/CD and to sync daily stock data ingestion.',
+        'Used Cloudflare D1 (SQL) to record holding snapshots and transaction history, and Cloudflare KV to cache high-value data constrained by third-party API rate limits.',
+        'Implemented fixed-formula financial computations served to the frontend in real time via edge functions.',
       ]
     },
     {
@@ -113,16 +113,18 @@ export const portfolioData: PortfolioData = {
       items: [
         { name: 'React / Next.js', rating: 4 },
         { name: 'TypeScript', rating: 4 },
-        { name: 'GraphQL', rating: 4 },
-        { name: 'Redux', rating: 4 },
         { name: 'Tailwind CSS', rating: 4 },
+        { name: 'SWR / TanStack Query', rating: 4 },
+        { name: 'Redux', rating: 4 },
+        { name: 'GraphQL', rating: 4 },
       ],
     },
     {
       category: 'Backend',
       items: [
+        { name: 'Python (FastAPI / Flask)', rating: 4 },
         { name: 'Node.js', rating: 4 },
-        { name: 'Python / Flask', rating: 4 },
+        { name: 'SQL (Production)', rating: 4 },
         { name: 'Java 17 / Spring', rating: 3 },
         { name: 'Cloudflare Workers (Edge)', rating: 4 },
         { name: 'AWS Lambda / Serverless', rating: 4 },
